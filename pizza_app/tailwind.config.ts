@@ -8,9 +8,13 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-roboto)', 'sans-serif'], 
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        tomatoRed: '#D32F2F',
+        oliveGreen: '#388E3C',
+        goldenYellow: '#FFB74D',
       },
     },
   },
