@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link href={"/"}>
           <img src="/PizzaHubLogo.png" alt="Logo" width={80} />
         </Link>
-        <ul className="flex flex-row gap-5 font-bold text-goldenYellow">
+        <ul className="flex flex-row gap-10 font-bold text-goldenYellow uppercase">
           <li>
             <Link href={"/about"}>About us</Link>
           </li>
