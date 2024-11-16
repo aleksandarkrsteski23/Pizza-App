@@ -4,9 +4,9 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 
 const roboto = Roboto({
-  subsets: ["latin"], // Add more subsets if needed
-  weight: ["400", "500", "700"], // Include font weights you need
-  variable: "--font-roboto", // Define a CSS variable
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {

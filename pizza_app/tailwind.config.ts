@@ -15,6 +15,7 @@ export default {
         tomatoRed: '#D32F2F',
         oliveGreen: '#388E3C',
         goldenYellow: '#FFB74D',
+        grayBG: "#E6E7D9"
       },
     },
   },
