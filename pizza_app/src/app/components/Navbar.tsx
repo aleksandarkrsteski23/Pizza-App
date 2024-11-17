@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
+  const { data: session }: any = useSession();
+  console.log(session);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-2xl ps-10 pe-20">
       <nav className="flex flex-row justify-between items-center text-tomatoRed">
@@ -15,9 +21,31 @@ const Navbar = () => {
           <li>
             <Link href={"/menu"}>Menu</Link>
           </li>
-          <li>
-            <Link href={"/login"}>Login</Link>
-          </li>
+          {!session ? (
+            <>
+              <li>
+                <Link href={"/login"}>Login</Link>
+              </li>
+              <li>
+                <Link href={"/register"}>Register</Link>
+              </li>
+            </>
+          ) : (
+            <>
+              {" "}
+              {session.user?.username || session.user?.email}
+              <li>
+                <button
+                  onClick={() => {
+                    signOut();
+                  }}
+                  className="bg-blue-600"
+                >
+                  Logout
+                </button>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </header>
